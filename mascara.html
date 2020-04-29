@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máscara</title>
+
+  
+</head>
+<body>
+
+    <h1>Exemplo de Máscara feita à mão</h1>
+    </br></br>
+
+    <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="14" name="" placeholder="Máscara CPF" id="campo">
+    
+</body>
+
+<script>
+    window.addEventListener('load', () => {
+        let a = document.getElementById('campo');
+        
+        a.addEventListener("input", () => {
+            let arr = a.value.split('');
+            
+            if(arr.length > 3 && arr[3] != "."){
+                arr.splice(3,0,'.');
+            }
+
+            if(arr.length > 7 && arr[7] != "."){
+                arr.splice(7,0,'.');
+            }
+
+            if(arr.length > 11 && arr[11] != "-"){
+                arr.splice(11,0,'-');
+            }
+
+            a.value = arr.join('');
+        });
+    });
+</script>
+</html>

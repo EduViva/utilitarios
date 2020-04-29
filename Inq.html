@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="funcs.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        *{font-family: 'Montserrat', sans-serif;}
+        #input{margin-left:15%; margin-top: 10%;}
+        #exit{position: absolute;margin-left: 55%; margin-top: 15px;}
+        #txt, #exit {height: 200px;}
+        #temp{position: absolute; height: fit-content; width: fit-content; margin-left: 200px; margin-top: 25px; background-color: #dcdcdc; border: .5px solid black; border-radius: 2px; padding: 5px;}
+        #load{text-align: center; font-size: 15pt; font-weight: bold; margin-top: -170px; display: none; z-index: 11;}
+        a{cursor: pointer; text-decoration: none; color: black;}
+        a:focus, a:hover{color: blue;}
+        </style>
+</head>
+<body>
+
+    <textarea rows="10" cols="50" disabled id='exit'></textarea>
+
+    <form action="javascript::gerar()" id="form">
+        <div id='input'>
+            <label for="txt">Insira os nomes aqui (separados por vírgulas)</label>
+            <br>
+
+            <textarea type="text" id="txt" autofocus placeholder="Insira o nome dos inquilinos aqui" rows="10" cols="50"></textarea>
+
+            <br><br>
+            <button id='save' onClick="gerar()">Gerar Link</button>
+        </div>
+    </form>
+
+    <div id="temp"></div>
+    <p id="load">Loading...</p>
+
+</body>
+</html>
