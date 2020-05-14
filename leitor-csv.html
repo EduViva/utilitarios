@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leitor de CSV</title>
+        <script src="funcs-leitor.js"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            
+            body{
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .upload{
+                margin: 30px auto;
+                border: 1px solid;
+                padding: 8px;
+                border-radius: 3px;
+                width: 55%;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 12.5pt;
+                font-weight: bold;
+            }
+
+            .upload input{
+                margin-left: 10px;
+                border: 1px solid rgba(0,0,0,.5);
+                padding: 8px;
+                border-radius: 2.5px;
+            }
+
+            #saida{
+                border: 1px solid rgba(0,0,0,.4);
+                border-radius: 2px;
+                height: fit-content;
+                margin: 80px 50px;
+                overflow: auto;
+            }
+
+            .pass{
+                margin: 30px auto;
+                border: 1px solid;
+                padding: 8px;
+                border-radius: 3px;
+                width: 40%;
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+            }
+
+            table{
+                text-align: center;
+                border: 1px solid gray;
+            }
+
+        </style>
+    </head>
+    
+    <body style="background-color: rgb(200,200,200)">
+
+        <div class="upload">
+            Faça upload de um arquivo CSV
+            <input type="file" accept=".csv" name="file" id="file">
+            <button type="button" id="inputBut" disabled>Subir arquivo</button>
+        </div>
+
+        <div class="pass">
+            <div>
+                Insira o passo de dados<br>
+                <small style="font-size: 8.5pt; color: rgba(0,0,0,.8);">A quantidade de dados por linha</small>
+            </div>
+            <input style="text-align: center; font-size: 12pt;" id="passo" disabled type="text">
+            <button type="button" id="butPasso" disabled>Gerar</button>
+        </div>
+
+        <div id="saida">
+
+        </div>
+    </body>
+</html>
