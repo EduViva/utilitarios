@@ -1,58 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista para rodízios</title>
-    <script src="funcs-lista.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-        *{
-            font-family: 'Montserrat', sans-serif;
-            margin:0;
-            padding: 0;
-        }
-        body{
-            height: 100%;
-            width: 100%;
-            margin-top: 10px;
-        }
-        .ann{
-            width: 90%;
-            text-align: center;
-            border-radius: 3px;
-            padding: 12px;
-            background-color: springgreen;
-            border: 2px solid rgb(2, 196, 99);
-            display: none;
-            margin: 25px auto 0;
-        }
-        .saida{
-            margin: 25px 15px;
-        }
-        .entrada{
-            margin-left: 15px;
-        }
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista para rodízios</title>
+        <script src="funcs-lista.js"></script>
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            *{
+                font-family: 'Montserrat', sans-serif;
+                margin:0;
+                padding: 0;
+            }
+            body{
+                height: 100%;
+                width: 100%;
+                margin-top: 10px;
+            }
+            input{
+                padding: 3px;
+                font-size: 14pt;
+            }
+            button{
+                padding: 3px;
+                font-size: 14pt;
+            }
+            .ann{
+                width: 90%;
+                text-align: center;
+                border-radius: 3px;
+                padding: 12px;
+                background-color: springgreen;
+                border: 2px solid rgb(2, 196, 99);
+                display: none;
+                margin: 25px auto 0;
+            }
+            .saida{
+                margin: 25px 15px;
+            }
+            .entrada{
+                margin-left: 15px;
+            }
+            #counts{
+                width: 90%;
+                border-radius: 3px;
+                padding: 12px;
+                background-color: rgb(10, 100, 450);
+                border: 2px solid rgb(10, 100, 100);
+                margin: 25px auto 0;
+                font-size: 13.5pt;
+                padding: 10px 20px;
+            }
+            label{
+                margin: 7px;
+                height: 20px;
+            }
+            .checkbox{
+                height: 20px;
+                width: 20px;
+                margin: 5px;
+            }
+        </style>
 
-</head>
-<body>
+    </head>
+    <body>
 
-    <div class="entrada">
-        <label for="lista-inp">Adicione um item</label>
-        <input type="text" id="lista-inp">
-        <button class="lista-add" id="lista-add">Add</button>
-    </div>
-    
-    <div class="saida" id="saida">
+        <div class="entrada">
+            <label for="lista-inp">Adicione um item</label>
+            <input type="text" id="lista-inp">
+            <button class="lista-add" id="lista-add">Add</button>
+        </div>
+        
+        <div class="saida" id="saida">
 
-    </div>
+        </div>
 
-    <div class="ann" id="ann">
-        Último checado: <b id="nome"></b>
-        às <b id="hora"></b>
-    </div>
+        <div class="ann" id="ann">
+            Último checado: <b id="nome"></b>
+            às <b id="hora"></b>
+        </div>
 
-    
-</body>
+        <div id="counts">
+            <h4 style="text-align: center;">Resultados</h4>
+        
+        </div>
+
+    </body>
 </html>
